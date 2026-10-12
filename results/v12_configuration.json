@@ -1,0 +1,76 @@
+{
+  "instance_prompt": "in egon schiele style",
+  "content_rank": 64,
+  "color_rank": 32,
+  "texture_rank": 128,
+  "base_lr": 5e-05,
+  "boost_lr_multiplier": 2.0,
+  "ortho_weight": 0.15,
+  "ortho_warmup_steps": 200,
+  "ortho_ct_weight": 0.3,
+  "aug_brightness": 0.4,
+  "aug_contrast": 0.4,
+  "aug_saturation": 0.7,
+  "aug_hue": 0.35,
+  "aug_blur_kernel": 25,
+  "aug_blur_sigma_min": 5.0,
+  "aug_blur_sigma_max": 12.0,
+  "aug_noise_std": 0.15,
+  "max_train_steps": 2000,
+  "train_batch_size": 1,
+  "resolution": 1024,
+  "gradient_checkpointing": true,
+  "use_8bit_adam": true,
+  "mixed_precision": "fp16",
+  "lr_scheduler": "cosine",
+  "lr_warmup_steps": 100,
+  "snr_gamma": 5.0,
+  "noise_offset": 0.05,
+  "seed": 42,
+  "checkpointing_steps": 99999,
+  "log_interval": 50,
+  "architecture": "HO-LoRA v12 (Dual-Res + 4-Step Texture-Solo)",
+  "blocks": {
+    "content": {
+      "block": "up_blocks.0.attentions.0",
+      "rank": 64,
+      "lr": 0.0001,
+      "resolution": "32x32"
+    },
+    "color": {
+      "block": "up_blocks.0.attentions.1",
+      "rank": 32,
+      "lr": 5e-05,
+      "resolution": "32x32"
+    },
+    "texture": {
+      "blocks": [
+        "up_blocks.0.attentions.2",
+        "up_blocks.1.attentions.0",
+        "up_blocks.1.attentions.1",
+        "up_blocks.1.attentions.2"
+      ],
+      "rank": 128,
+      "lr": 0.00015000000000000001,
+      "resolutions": [
+        "32x32",
+        "64x64"
+      ],
+      "n_blocks": 4
+    }
+  },
+  "layer_params": {
+    "content": 14090240,
+    "color": 7045120,
+    "texture": 38207488
+  },
+  "total_params": 59342848,
+  "cycle_counts": {
+    "full": 500,
+    "disable_color": 500,
+    "disable_texture": 500,
+    "solo_texture": 500
+  },
+  "base_model_description": "Local SDXL Diffusers conversion; an exact upstream revision was not recorded.",
+  "reproducibility_note": "Recorded ortho_ct_weight is 0.3, but the archived training code hard-codes the Content-Texture pair coefficient to 0.5 and never reads this argument. The executed historical source cannot be proven from this config alone."
+}

@@ -1,0 +1,80 @@
+{
+  "sources": [
+    {
+      "file": "p00_v4_no_lora.png",
+      "sha256": "7d2fa6cc612396d0f5cc8388392e234276cad7b72d453574c1c5e72e43291f70",
+      "used_in": "assets/branch_comparison.webp"
+    },
+    {
+      "file": "p00_v4_content_only.png",
+      "sha256": "4d1e10fad6ffd4bba2303c6c5576eb33e27ee19fcd3c0ddca2627092b97a6f23",
+      "used_in": "assets/branch_comparison.webp"
+    },
+    {
+      "file": "p00_v4_color_only.png",
+      "sha256": "28434c8b88e5f035eefd69e7b6e741bd0fd23f3e47962044f9b0dedfa3d4db34",
+      "used_in": "assets/branch_comparison.webp"
+    },
+    {
+      "file": "p00_v4_texture_only.png",
+      "sha256": "2cfc731f24722f224b6490dbd453264bcc3c357c187f951d4b60512975edeffc",
+      "used_in": "assets/branch_comparison.webp"
+    },
+    {
+      "file": "p00_v4_full.png",
+      "sha256": "e2fd7409d2eda1d003db64d84e9c5f9e7600af2fd0983b7f2c7e9eb7e4eac870",
+      "used_in": "assets/branch_comparison.webp"
+    },
+    {
+      "file": "p02_v4_no_lora.png",
+      "sha256": "7fcc01f090dae2cf8443bd1d251b46e127a8a48e9ea97dc709b72ee2515e64e1",
+      "used_in": "assets/branch_comparison.webp"
+    },
+    {
+      "file": "p02_v4_content_only.png",
+      "sha256": "9920985a20b1ed6ed68735213a92fb9a4eee01e3c6b8fc305fb09bde7e3f18aa",
+      "used_in": "assets/branch_comparison.webp"
+    },
+    {
+      "file": "p02_v4_color_only.png",
+      "sha256": "f9d9fea18e58ae70fd786f69dda222b8c6682173d537c2755a2ac6b854ab3910",
+      "used_in": "assets/branch_comparison.webp"
+    },
+    {
+      "file": "p02_v4_texture_only.png",
+      "sha256": "e7671b6b957620ab687e92ffedd0bbeffcafea41566af5af325a577e1bb357c8",
+      "used_in": "assets/branch_comparison.webp"
+    },
+    {
+      "file": "p02_v4_full.png",
+      "sha256": "4b825d947bc49d2e7fed9d1d6f75a601ae3abf0b9b1153af19dfda8b0fe01569",
+      "used_in": "assets/branch_comparison.webp"
+    },
+    {
+      "file": "p10_out_no_lora.png",
+      "sha256": "924166f746485bde9b2898ea6e2a6dd346f386e39d11264bc754f9cf13cae60d",
+      "used_in": "assets/branch_comparison.webp"
+    },
+    {
+      "file": "p10_out_content_only.png",
+      "sha256": "542d856bff54deeaf1920d42091f2e88fee580d0e51a315f9fa6265caf1850c8",
+      "used_in": "assets/branch_comparison.webp"
+    },
+    {
+      "file": "p10_out_color_only.png",
+      "sha256": "5d98ff5f72a96aeae924d8dcd3a0d2a0432392b61faec7c91b2e30a01c54db36",
+      "used_in": "assets/branch_comparison.webp"
+    },
+    {
+      "file": "p10_out_texture_only.png",
+      "sha256": "fc4f5743a3d2e3ffa3b87d5cd326cb786dea59ba38288345a0e6ace05adaa246",
+      "used_in": "assets/branch_comparison.webp"
+    },
+    {
+      "file": "p10_out_full.png",
+      "sha256": "4e5a0a24fc4a850b77b556860215636f4b6af675aaf1bdd18048704049d3f3e1",
+      "used_in": "assets/branch_comparison.webp"
+    }
+  ],
+  "transformation": "Lanczos resize to 300x300, labeled layout, WebP quality 88"
+}

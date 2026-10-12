@@ -1,0 +1,71 @@
+{
+  "prompts": [
+    {
+      "id": "p00",
+      "text": "A portrait of a woman with red hair sitting on a chair, in egon schiele style"
+    },
+    {
+      "id": "p01",
+      "text": "A self-portrait of a young man with intense gaze, in egon schiele style"
+    },
+    {
+      "id": "p02",
+      "text": "A townscape with church towers and mountains, in egon schiele style"
+    },
+    {
+      "id": "p03",
+      "text": "A sunflower with brown leaves against pale background, in egon schiele style"
+    },
+    {
+      "id": "p04",
+      "text": "A cat sitting on a windowsill, in egon schiele style"
+    },
+    {
+      "id": "p05",
+      "text": "A nude figure with contorted pose and angular limbs, in egon schiele style"
+    },
+    {
+      "id": "p06",
+      "text": "A couple embracing with intertwined bodies, in egon schiele style"
+    },
+    {
+      "id": "p07",
+      "text": "An autumn tree with bare branches against pale sky, in egon schiele style"
+    },
+    {
+      "id": "p08",
+      "text": "A modern sports car on a highway, in egon schiele style"
+    },
+    {
+      "id": "p09",
+      "text": "A bowl of fruit on a wooden table, in egon schiele style"
+    },
+    {
+      "id": "p10",
+      "text": "An astronaut floating in space, in egon schiele style"
+    },
+    {
+      "id": "p11",
+      "text": "A Japanese pagoda in a garden, in egon schiele style"
+    },
+    {
+      "id": "p12",
+      "text": "A robot playing chess in a dark room, in egon schiele style"
+    },
+    {
+      "id": "p13",
+      "text": "A tropical beach with palm trees at sunset, in egon schiele style"
+    },
+    {
+      "id": "p14",
+      "text": "A violin on a velvet cloth, in egon schiele style"
+    }
+  ],
+  "negative_prompt": "blurry, low quality, deformed, ugly, photorealistic, 3d render",
+  "script_defaults": {
+    "seed": 42,
+    "steps": 25,
+    "guidance_scale": 7.5
+  },
+  "note": "Extracted from the archived inference script; per-image runtime metadata was not saved."
+}

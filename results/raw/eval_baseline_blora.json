@@ -1,0 +1,107 @@
+{
+  "per_variant": {
+    "color_only": {
+      "color_hist_dist": {
+        "mean": 3.0979815847822514,
+        "std": 2.736528840523972
+      },
+      "edge_iou": {
+        "mean": 0.13521987641391242,
+        "std": 0.025536641177555545
+      },
+      "gram_dist": {
+        "mean": 2.365209078043699,
+        "std": 0.6643600230282083
+      }
+    },
+    "color_texture": {
+      "color_hist_dist": {
+        "mean": 3.0979815847822514,
+        "std": 2.736528840523972
+      },
+      "edge_iou": {
+        "mean": 0.13521987641391242,
+        "std": 0.025536641177555545
+      },
+      "gram_dist": {
+        "mean": 2.365209078043699,
+        "std": 0.6643600230282083
+      }
+    },
+    "content_color": {
+      "color_hist_dist": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "edge_iou": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "gram_dist": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    },
+    "content_only": {
+      "color_hist_dist": {
+        "mean": 319.1574777269807,
+        "std": 891.498144765115
+      },
+      "edge_iou": {
+        "mean": 0.1014823077260553,
+        "std": 0.01658446691892351
+      },
+      "gram_dist": {
+        "mean": 4.843120071291923,
+        "std": 1.4569748024037896
+      }
+    },
+    "content_texture": {
+      "color_hist_dist": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "edge_iou": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "gram_dist": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    },
+    "no_lora": {
+      "color_hist_dist": {
+        "mean": 702.7607010616721,
+        "std": 2140.2400817088346
+      },
+      "edge_iou": {
+        "mean": 0.09798676738435029,
+        "std": 0.019050656931791674
+      },
+      "gram_dist": {
+        "mean": 5.037383382519086,
+        "std": 1.2189326375281344
+      }
+    },
+    "texture_only": {
+      "color_hist_dist": {
+        "mean": 3.0979815847822514,
+        "std": 2.736528840523972
+      },
+      "edge_iou": {
+        "mean": 0.13521987641391242,
+        "std": 0.025536641177555545
+      },
+      "gram_dist": {
+        "mean": 2.365209078043699,
+        "std": 0.6643600230282083
+      }
+    }
+  },
+  "weight_orthogonality": {
+    "cos_content_color": 3.427309275139123e-05,
+    "cos_content_texture": 3.427309275139123e-05,
+    "cos_color_texture": 1.0004032850265503
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "prepared_on": "2026-10-12",
+  "experiments": [
+    {
+      "file": "raw/eval_baseline_standard.json",
+      "sha256": "6b1d72877ab9e7397ace0772c2d6b16238a7be523e596bbc09de712d29b6577c",
+      "transformation": "byte-for-byte copy of recorded evaluation JSON",
+      "generated_image_count_in_local_archive": 120,
+      "prompt_count_in_local_archive": 15
+    },
+    {
+      "file": "raw/eval_baseline_blora.json",
+      "sha256": "ed8fe65e8ce510e94493f2c22cbc8b913fc1d669b5e22f0c65daf9e4eb027d65",
+      "transformation": "byte-for-byte copy of recorded evaluation JSON",
+      "generated_image_count_in_local_archive": 120,
+      "prompt_count_in_local_archive": 15
+    },
+    {
+      "file": "raw/eval_v10.json",
+      "sha256": "8c235b3c22493809f3275124f24e737dbf43f9a33f39ee21cacc0befe550ecd4",
+      "transformation": "byte-for-byte copy of recorded evaluation JSON",
+      "generated_image_count_in_local_archive": 120,
+      "prompt_count_in_local_archive": 15
+    },
+    {
+      "file": "raw/eval_ablation_3step.json",
+      "sha256": "f1592ef1778798f2074ff288441e2214bb80f0085eeba57ca6a37ea13ef6beef",
+      "transformation": "byte-for-byte copy of recorded evaluation JSON",
+      "generated_image_count_in_local_archive": 120,
+      "prompt_count_in_local_archive": 15
+    },
+    {
+      "file": "raw/eval_ablation_no_ortho.json",
+      "sha256": "29b8da650808baeace1378b57c93ef8198616eaf100f51e7d170c24294470934",
+      "transformation": "byte-for-byte copy of recorded evaluation JSON",
+      "generated_image_count_in_local_archive": 120,
+      "prompt_count_in_local_archive": 15
+    },
+    {
+      "file": "raw/eval_v12.json",
+      "sha256": "6b029f4e95371f4ab26aec5af2ac96377da79a01d511e77bb18ed8d225d9ab10",
+      "transformation": "byte-for-byte copy of recorded evaluation JSON",
+      "generated_image_count_in_local_archive": 120,
+      "prompt_count_in_local_archive": 15
+    }
+  ],
+  "note": "Counts describe the archived image directories, not independent training repeats. Original JSON does not contain full environment metadata."
+}

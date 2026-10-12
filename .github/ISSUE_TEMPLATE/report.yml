@@ -1,0 +1,18 @@
+name: Documentation or result issue
+description: Report an error in a claim, table, source or summary utility.
+title: "[Report] "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Identify the file, table row or claim and the expected correction.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence and reproduction
+      description: Include public evidence or commands. Do not upload private data or credentials.
+    validations:
+      required: true
