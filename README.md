@@ -10,7 +10,7 @@
 
 **SDXL · Three adapter branches · Four-step training cycle**
 
-[![Project checks](https://github.com/KKbiubiu/HO-LoRA-showcase/actions/workflows/checks.yml/badge.svg)](https://github.com/KKbiubiu/HO-LoRA-showcase/actions/workflows/checks.yml)
+[![Project checks](https://github.com/KKbiubiu/HO-LoRA/actions/workflows/checks.yml/badge.svg)](https://github.com/KKbiubiu/HO-LoRA/actions/workflows/checks.yml)
 
 </div>
 
@@ -104,8 +104,8 @@ Removing Texture-Solo changes the recorded ΔT by **1.162**; removing orthogonal
 Clone the repository and enter its root directory:
 
 ```bash
-git clone https://github.com/KKbiubiu/HO-LoRA-showcase.git
-cd HO-LoRA-showcase
+git clone https://github.com/KKbiubiu/HO-LoRA.git
+cd HO-LoRA
 ```
 
 Install **Python 3.10 or newer** and check the interpreter:

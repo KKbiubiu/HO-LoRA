@@ -10,7 +10,7 @@
 
 **SDXL · 三个适配分支 · 四步训练周期**
 
-[![项目检查](https://github.com/KKbiubiu/HO-LoRA-showcase/actions/workflows/checks.yml/badge.svg)](https://github.com/KKbiubiu/HO-LoRA-showcase/actions/workflows/checks.yml)
+[![项目检查](https://github.com/KKbiubiu/HO-LoRA/actions/workflows/checks.yml/badge.svg)](https://github.com/KKbiubiu/HO-LoRA/actions/workflows/checks.yml)
 
 </div>
 
@@ -104,8 +104,8 @@ Windows 使用 `py -3.11 -m venv .venv`，并在 PowerShell 中执行 `.venv\Scr
 克隆仓库并进入根目录：
 
 ```bash
-git clone https://github.com/KKbiubiu/HO-LoRA-showcase.git
-cd HO-LoRA-showcase
+git clone https://github.com/KKbiubiu/HO-LoRA.git
+cd HO-LoRA
 ```
 
 安装 **Python 3.10 或更新版本**，确认解释器可用：
