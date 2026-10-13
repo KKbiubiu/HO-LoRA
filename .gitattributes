@@ -5,3 +5,4 @@
 *.csv text eol=lf
 *.yml text eol=lf
 *.webp binary
+*.png binary

@@ -39,4 +39,10 @@ Run `python3 tools/summarize_results.py --check` to verify the tables, or omit `
 
 The result differences support a descriptive comparison in this setting. They do not support percentage causal attribution, statistical significance, a universal quality ranking or independent control of every visual attribute.
 
+## Public evaluation core
+
+[`core/evaluation.py`](../core/evaluation.py) implements the three image metrics, same-prompt pairing and ΔT. VGG evaluation requires official pretrained weights and has no random-weight fallback. The code supports new evaluations; it does not retroactively establish the weight provenance of historical JSON files. See [API examples](CORE.md#evaluation).
+
+The [result gallery](../results/README.md) contains twelve selected final outputs at their original resolution. These images are visual results, not the full set of paired variants used for the recorded metrics.
+
 [Complete results](../results/SUMMARY.md) · [Project overview](../README.md)

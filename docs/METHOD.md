@@ -31,6 +31,8 @@ The loss uses the mean squared cross-Gram similarity of normalized LoRA down-pro
 
 The saved `ortho_ct_weight` is **0.3**, while the retained historical training source uses a fixed Content–Texture coefficient of **0.5** without reading that argument. The executed source was not versioned with the run, so the actual coefficient cannot be certified from the saved configuration. The released results retain their original values and this uncertainty.
 
+The public [training core](../core/training.py) makes this coefficient explicit as `ct_weight`, defaulting to **0.5**. It matches projection paths in the same-width Content, Color and first Texture blocks. Texture's three higher-resolution blocks contribute reconstruction gradients but are not included in this cross-Gram pairing. The public API is described in [CORE.md](CORE.md).
+
 ## Branch composition
 
 The recorded inference setup evaluates eight variants:
@@ -47,5 +49,7 @@ The recorded inference setup evaluates eight variants:
 | `color_texture` | Color + Texture |
 
 Each recorded experiment covers 15 prompts. The public comparison figure shows selected outputs from five variants; it does not replace the full quantitative evaluation.
+
+![Branch composition](../assets/branch_comparison.webp)
 
 [Project overview](../README.md) · [Evaluation protocol](EVALUATION.md)

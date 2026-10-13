@@ -1,5 +1,11 @@
 # Comparison image
 
+## Results
+
+[`results.webp`](results.webp) previews the twelve original-resolution PNG files in [Results](../results/README.md). The PNG files preserve their source bytes; their filenames and SHA-256 hashes are recorded in [provenance.json](provenance.json). The preview resizes complete images without cropping or retouching.
+
+## Branch comparison
+
 `branch_comparison.webp` combines 15 recorded v12 outputs. Prompts p00, p02 and p10 each show five variants: `no_lora`, `content_only`, `color_only`, `texture_only` and `full`.
 
 Each source image was resized to 300 × 300 pixels and arranged in a labeled grid. Colors and image content were not retouched. The [provenance file](provenance.json) records source-image hashes and the processing settings.

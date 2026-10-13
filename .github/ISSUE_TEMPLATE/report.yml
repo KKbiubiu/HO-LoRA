@@ -1,5 +1,5 @@
-name: Documentation or result issue
-description: Report an error in a claim, table, source or summary utility.
+name: Code, documentation or result issue
+description: Report a core implementation error, documentation issue or result discrepancy.
 title: "[Report] "
 body:
   - type: textarea

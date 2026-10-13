@@ -76,5 +76,121 @@
       "used_in": "assets/branch_comparison.webp"
     }
   ],
-  "transformation": "Lanczos resize to 300x300, labeled layout, WebP quality 88"
+  "transformation": "Lanczos resize to 300x300, labeled layout, WebP quality 88",
+  "results": [
+    {
+      "file": "results/images/result_01.png",
+      "source_file": "p00_v4_full.png",
+      "sha256": "e2fd7409d2eda1d003db64d84e9c5f9e7600af2fd0983b7f2c7e9eb7e4eac870",
+      "width": 1024,
+      "height": 1024,
+      "transformation": "none"
+    },
+    {
+      "file": "results/images/result_02.png",
+      "source_file": "p01_v4_full.png",
+      "sha256": "f82b45bb75941d75891da0a1fc32c65a9f7d84e0c278e44eeceb15930f728508",
+      "width": 1024,
+      "height": 1024,
+      "transformation": "none"
+    },
+    {
+      "file": "results/images/result_03.png",
+      "source_file": "p02_v4_full.png",
+      "sha256": "4b825d947bc49d2e7fed9d1d6f75a601ae3abf0b9b1153af19dfda8b0fe01569",
+      "width": 1024,
+      "height": 1024,
+      "transformation": "none"
+    },
+    {
+      "file": "results/images/result_04.png",
+      "source_file": "p03_v4_full.png",
+      "sha256": "52918bed00ad0015f4eec1aa07d9695dbe95f27e70288215185eb8425e5bdc80",
+      "width": 1024,
+      "height": 1024,
+      "transformation": "none"
+    },
+    {
+      "file": "results/images/result_05.png",
+      "source_file": "p04_v4_full.png",
+      "sha256": "ae0ae8f2f5b170ca5429d6fbe9a38f99ec4b7beffe83921807b9686015891576",
+      "width": 1024,
+      "height": 1024,
+      "transformation": "none"
+    },
+    {
+      "file": "results/images/result_06.png",
+      "source_file": "p07_in_full.png",
+      "sha256": "4fe6b6f41833fda09a18d253de04efe4dc1558cb4eb72ccb7dd70ca8c4c613ae",
+      "width": 1024,
+      "height": 1024,
+      "transformation": "none"
+    },
+    {
+      "file": "results/images/result_07.png",
+      "source_file": "p08_out_full.png",
+      "sha256": "e594b2035347eb91e1423fc5b1559d70decee3eb429ac0d05a273fbddc7bd27c",
+      "width": 1024,
+      "height": 1024,
+      "transformation": "none"
+    },
+    {
+      "file": "results/images/result_08.png",
+      "source_file": "p09_out_full.png",
+      "sha256": "3225d6a952b6f5e4ea1e0a40ef918e11011c0b01377647ed3d232c2d08c83cc9",
+      "width": 1024,
+      "height": 1024,
+      "transformation": "none"
+    },
+    {
+      "file": "results/images/result_09.png",
+      "source_file": "p10_out_full.png",
+      "sha256": "4e5a0a24fc4a850b77b556860215636f4b6af675aaf1bdd18048704049d3f3e1",
+      "width": 1024,
+      "height": 1024,
+      "transformation": "none"
+    },
+    {
+      "file": "results/images/result_10.png",
+      "source_file": "p11_out_full.png",
+      "sha256": "0dd4ea4c9b7cd2d0730a4781855a447d56c9fac73354b2fec7bafbdcad3921ba",
+      "width": 1024,
+      "height": 1024,
+      "transformation": "none"
+    },
+    {
+      "file": "results/images/result_11.png",
+      "source_file": "p13_out_full.png",
+      "sha256": "211a9e1a164b7f368450f1aad5b12591e80063928591c9e8af7efc32a4fc24fd",
+      "width": 1024,
+      "height": 1024,
+      "transformation": "none"
+    },
+    {
+      "file": "results/images/result_12.png",
+      "source_file": "p14_out_full.png",
+      "sha256": "ceeaff495df32a49a5f7bc15c67270101e5a14f2f4221625c08f3f39c875ffa9",
+      "width": 1024,
+      "height": 1024,
+      "transformation": "none"
+    }
+  ],
+  "results_preview": {
+    "file": "assets/results.webp",
+    "sources": [
+      "results/images/result_01.png",
+      "results/images/result_02.png",
+      "results/images/result_03.png",
+      "results/images/result_04.png",
+      "results/images/result_05.png",
+      "results/images/result_06.png",
+      "results/images/result_07.png",
+      "results/images/result_08.png",
+      "results/images/result_09.png",
+      "results/images/result_10.png",
+      "results/images/result_11.png",
+      "results/images/result_12.png"
+    ],
+    "transformation": "Lanczos resize to 392x392; uncropped grid; WebP quality 90"
+  }
 }

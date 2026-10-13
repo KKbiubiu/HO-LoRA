@@ -4,36 +4,37 @@
 
 ### 面向 SDXL 的结构、色彩与纹理组合适配
 
-**Hierarchical Orthogonal LoRA · 项目方法、可追溯结果与可运行的指标汇总工具。**
+**Hierarchical Orthogonal LoRA · 核心训练、评估实现与结果展示。**
 
-[English](README.md) · [简体中文](README.zh-CN.md) · [方法说明](docs/METHOD.md) · [结果汇总](results/SUMMARY.md) · [评估协议](docs/EVALUATION.md)
+[English](README.md) · [简体中文](README.zh-CN.md) · [核心实现](docs/CORE.md) · [方法说明](docs/METHOD.md) · [结果](results/README.md) · [评估协议](docs/EVALUATION.md)
 
 **SDXL · 三个适配分支 · 四步训练周期**
 
-[![结果检查](https://github.com/KKbiubiu/HO-LoRA-showcase/actions/workflows/checks.yml/badge.svg)](https://github.com/KKbiubiu/HO-LoRA-showcase/actions/workflows/checks.yml)
+[![项目检查](https://github.com/KKbiubiu/HO-LoRA-showcase/actions/workflows/checks.yml/badge.svg)](https://github.com/KKbiubiu/HO-LoRA-showcase/actions/workflows/checks.yml)
 
 </div>
 
-![HO-LoRA v12 的基础模型、结构、色彩、纹理及完整组合对比](assets/branch_comparison.webp)
+[![结果](assets/results.webp)](results/README.md)
 
-*精选的肖像、城镇与宇航员生成结果；每行使用相同提示词比较不同分支。图片来源与处理方式见[图像说明](assets/README.md)。*
+[结果](results/README.md)
 
 ## 项目介绍
 
 HO-LoRA 将 SDXL U-Net 中的 LoRA 适配器划分为 **Content（结构）**、**Color（色彩）**、**Texture（纹理）** 三个可组合分支。v12 采用双分辨率纹理分支和四步训练周期，加入仅训练 Texture 的独立步骤，探索更细粒度的风格控制。
 
-本仓库展示方法、精选图像和已记录的评估结果，并提供从原始 JSON 重建汇总表的工具。**训练、图像生成核心实现和模型权重不在此仓库公开。** 详见[公开范围](docs/RELEASE_SCOPE.md)。
+本仓库提供核心训练与评估实现、12 张原始分辨率结果以及已记录的评估数据。训练代码集中展示分支划分、四阶段优化和 cross-Gram 正交约束。数据加载、模型下载、检查点管理和完整生成流程不属于本次精简发布范围。详见[公开范围](docs/RELEASE_SCOPE.md)。
 
 ## 仓库内容
 
 | 内容 | 状态 |
 | :--- | :--- |
 | 方法与评估说明 | 已提供 |
-| 精选生成图与来源哈希 | 已提供 |
+| 结果 | 12 张未经修改的 1024 × 1024 PNG 原图 |
+| 核心训练 | 分支 LoRA、四阶段训练与正交约束 |
+| 核心评估 | 颜色直方图距离、边缘 IoU、VGG19 Gram 距离及 ΔT |
 | 六组原始评估 JSON | 已提供，保留原始数值 |
 | 评估提示词与 v12 参数记录 | 已提供 |
 | 汇总脚本与验证测试 | 可运行，Python 3.10+ 标准库 |
-| 训练、推理和图像评估核心实现 | 未公开 |
 | 原始训练图像与模型权重 | 不分发 |
 
 ## 核心设计
@@ -57,6 +58,27 @@ flowchart LR
 四步训练周期依次为：原图联合训练并加入正交项；色彩抖动并禁用 Color；模糊加噪并禁用 Texture；原图仅训练 Texture。分支名称表示预期作用，不代表所有视觉属性已经实现完全独立控制。
 
 训练周期、分支组合及历史配置中需要注意的系数差异见[方法文档](docs/METHOD.md)。
+
+## 核心实现
+
+实现集中在两个模块：
+
+- [`core/training.py`](core/training.py)：SDXL 注意力层位置、LoRA 组合、分阶段增强与梯度分配，以及单步参数优化。
+- [`core/evaluation.py`](core/evaluation.py)：图像指标、同一提示词下以 full 输出为参照的配对评估，以及纹理 ΔT。
+
+使用 **Python 3.10 或 3.11**。在仓库根目录创建独立环境并安装核心依赖。以下 CPU 配置即可运行测试：
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install torch==2.1.0 torchvision==0.16.0 --index-url https://download.pytorch.org/whl/cpu
+python -m pip install -r requirements-core.txt
+python -m unittest discover -s tests -p 'test_*_core.py' -v
+```
+
+Windows 使用 `py -3.11 -m venv .venv`，并在 PowerShell 中执行 `.venv\Scripts\Activate.ps1` 激活环境。集成 GPU 训练时，应将 CPU 版 PyTorch、Torchvision 替换为匹配的 CUDA 版本。
+
+测试不需要下载 SDXL 或 VGG。实际训练由调用方提供 U-Net、VAE、噪声调度器及 SDXL 条件输入；VGG 评估显式加载官方预训练权重，加载失败时终止。接口示例与集成要求见[核心代码说明](docs/CORE.md)。
 
 ## 已记录的结果
 
@@ -92,13 +114,13 @@ cd HO-LoRA-showcase
 python3 --version
 ```
 
-Windows 可将下面命令中的 `python3` 替换为 `py -3`。汇总工具只使用 Python 标准库，无需安装额外依赖、配置 GPU 或下载模型。
+Windows 可将下面命令中的 `python3` 替换为 `py -3`。仅运行汇总工具时只需 Python 标准库，无需安装额外依赖、配置 GPU 或下载模型。
 
 ### 2. 核验现有结果
 
 ```bash
 python3 tools/summarize_results.py --check
-python3 -m unittest discover -s tests -v
+python3 -m unittest discover -s tests -p test_results.py -v
 ```
 
 第一条命令核对 CSV、Markdown 汇总是否与六份原始 JSON 一致，成功后显示 `Result summaries verified.`。测试检查结果差值、无效指标处理及汇总表一致性。
@@ -116,8 +138,12 @@ python3 tools/summarize_results.py
 ## 目录结构
 
 ```text
-assets/                  精选对比图与来源记录
-docs/                    方法、评估与公开范围
+assets/                  结果预览、分支对比图与来源记录
+core/training.py         分支适配器与四阶段优化步骤
+core/evaluation.py       配对图像评估及纹理 ΔT
+docs/                    核心接口、方法、评估与公开范围
+results/images/          原始分辨率结果图
+results/README.md        结果图集
 results/raw/             六份原始评估 JSON
 results/summary.csv      可读取和分析的 CSV 汇总
 results/SUMMARY.md       自动生成的结果表
@@ -125,7 +151,7 @@ results/prompts.json     评估提示词与推理默认参数
 results/v12_configuration.json
                          v12 参数记录
 tools/                   汇总工具
-tests/                   结果一致性测试
+tests/                   核心行为与结果一致性测试
 ```
 
 ## 已知局限
@@ -136,4 +162,4 @@ tests/                   结果一致性测试
 
 项目基于 [LoRA](https://github.com/microsoft/LoRA)、[SDXL](https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0)、[Diffusers](https://github.com/huggingface/diffusers) 与 [B-LoRA](https://github.com/yardenfren1996/B-LoRA) 相关工作。仓库中的 B-LoRA 数值来自本地基线实现。
 
-欢迎通过 Issues 或 Pull Requests 反馈文档、数值与解释问题，具体流程见[贡献说明](CONTRIBUTING.md)。本仓库尚未选择许可证，详见[许可证状态](LICENSE_STATUS.md)。
+欢迎通过 Issues 或 Pull Requests 改进核心实现或反馈文档与结果问题，具体流程见[贡献说明](CONTRIBUTING.md)。本仓库尚未选择许可证，详见[许可证状态](LICENSE_STATUS.md)。
